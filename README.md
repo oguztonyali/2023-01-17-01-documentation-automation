@@ -20,7 +20,7 @@ to the Wetransfer and copy the Wetransfer link.
   
   I plan to use Python and Tkinter for the project. GUI is will be faster than just use as script.
   
-  DISCLAIMER: This is written by a new software developer. While using this program please consider this and check every step manually.
+  <b>DISCLAIMER:</b> This is written by a new software developer. While using this program please consider this and check every step manually.
   
 
 # 2023-01-17-01-documentation-automation
