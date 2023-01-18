@@ -31,7 +31,7 @@ tender_no_entry = Entry(width=30)
 tender_no_entry.grid(row=1, column=2)
 
 tender_name_label = Label(text="Tender Name:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-tender_name_label.grid(row=1, column=4)
+tender_name_label.grid(row=1, column=4, sticky="W")
 
 tender_name_entry = Entry(width=30)
 tender_name_entry.grid(row=1, column=5)
@@ -42,6 +42,12 @@ country_choose.grid(row=2, column=1, sticky="W")
 country_box = ttk.Combobox(window, width=27)
 country_box.grid(row=2, column=2)
 country_box["values"] = country_list
+
+select_tender_folder_label = Label(text="Select where to create Rar File:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+select_tender_folder_label.grid(row=2, column=0, sticky="W", columnspan=3, pady=10)
+
+select_tender_folder_entry = Entry(width=90)
+select_tender_folder_entry.grid(row=2, column=3, columnspan=5, sticky="W")
 
 # -------------------------------------------------------------------------------- #
 
