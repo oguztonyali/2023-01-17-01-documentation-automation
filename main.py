@@ -44,10 +44,52 @@ country_box.grid(row=2, column=2)
 country_box["values"] = country_list
 
 select_tender_folder_label = Label(text="Select where to create Rar File:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-select_tender_folder_label.grid(row=2, column=0, sticky="W", columnspan=3, pady=10)
+select_tender_folder_label.grid(row=3, column=0, sticky="W", columnspan=3, pady=10)
 
 select_tender_folder_entry = Entry(width=90)
-select_tender_folder_entry.grid(row=2, column=3, columnspan=5, sticky="W")
+select_tender_folder_entry.grid(row=3, column=3, columnspan=5, sticky="W")
+
+constant_label = Label(text="Constant Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+constant_label.grid(row=4, column=1, columnspan=3)
+
+tender_files_label = Label(text="Tender Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+tender_files_label.grid(row=4, column=4, columnspan=4)
+
+catalogue_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+catalogue_checkbox.grid(row=5, column=0)
+
+catalogue_label = Label(text="Catalogue", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+catalogue_label.grid(row=5, column=1)
+
+iso_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+iso_checkbox.grid(row=6, column=0)
+
+iso_label = Label(text="ISO Certificates", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+iso_label.grid(row=6, column=1)
+
+iec_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+iec_checkbox.grid(row=7, column=0)
+
+iec_label = Label(text="IEC Certificates", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+iec_label.grid(row=7, column=1)
+
+test_reports_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+test_reports_checkbox.grid(row=8, column=0)
+
+test_reports_label = Label(text="Test Reports", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+test_reports_label.grid(row=8, column=1)
+
+references_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+references_checkbox.grid(row=9, column=0)
+
+references_label = Label(text="References", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+references_label.grid(row=9, column=1)
+
+company_profile_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+company_profile_checkbox.grid(row=10, column=0)
+
+company_profile_label = Label(text="Company Profile", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+company_profile_label.grid(row=10, column=1)
 
 # -------------------------------------------------------------------------------- #
 
