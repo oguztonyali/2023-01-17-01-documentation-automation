@@ -61,6 +61,28 @@ def first_page():
     canvas = Canvas(width=256, height=256, bg=DARK, highlightthickness=0)
     folder_img = PhotoImage(file="folders.png")
     canvas.create_image(128, 128, image=folder_img)
-    canvas.grid(row=0, column=0, columnspan=8)
+    canvas.grid(row=0, column=0, columnspan=3)
+
+    tender_browsing_label = Label(text="Please Confirm Documents Locations", fg=BLUE, bg=DARK, font=(FONT_NAME, 14, "bold"))
+    tender_browsing_label.grid(row=1, column=0, columnspan=3, pady=10)
+
+    catalogue_address_label = Label(text="Catalogue:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    catalogue_address_label.grid(row=2, column=0)
+
+    catalogue_address_entry = Entry(width=30)
+    catalogue_address_entry.grid(row=2, column=1, padx=2)
+
+    catalogue_address_button = Button(text="Browse")
+    catalogue_address_button.grid(row=2, column=2, padx=2, pady=10)
+
+    iso_address_label = Label(text="ISO Certificates:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    iso_address_label.grid(row=3, column=0)
+
+    iso_address_entry = Entry(width=30)
+    iso_address_entry.grid(row=3, column=1, padx=2)
+
+    iso_address_button = Button(text="Browse")
+    iso_address_button.grid(row=3, column=2, padx=2, pady=10)
+
 
     window_first.mainloop()

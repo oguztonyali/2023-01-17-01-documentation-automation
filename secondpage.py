@@ -12,6 +12,8 @@ country_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American 
 
 
 def second_page():
+    """Second page contains choosing options on tender and constant documents. Also, tender information such
+    as quotation number, tender name etc. can be written on this page."""
     window_second = Tk()
     window_second.title("Tender Documentation Helper v.0.2")
     window_second.config(padx=30, pady=30, bg=DARK)
