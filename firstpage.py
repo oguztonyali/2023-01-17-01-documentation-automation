@@ -56,15 +56,16 @@ country_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American 
 def first_page():
     window_first = Tk()
     window_first.title("Tender Documentation Helper v.0.2")
-    window_first.config(padx=30, pady=30, bg=DARK)
+    window_first.config(padx=30, pady=20, bg=DARK)
 
     canvas = Canvas(width=256, height=256, bg=DARK, highlightthickness=0)
     folder_img = PhotoImage(file="folders.png")
     canvas.create_image(128, 128, image=folder_img)
-    canvas.grid(row=0, column=0, columnspan=3)
+    canvas.grid(row=0, column=0, columnspan=6)
 
-    tender_browsing_label = Label(text="Please Confirm Documents Locations", fg=BLUE, bg=DARK, font=(FONT_NAME, 14, "bold"))
-    tender_browsing_label.grid(row=1, column=0, columnspan=3, pady=10)
+    tender_browsing_label = Label(text="Please Confirm Documents Locations", fg=BLUE, bg=DARK, font=(
+        FONT_NAME, 14, "bold"))
+    tender_browsing_label.grid(row=1, column=0, columnspan=6, pady=5)
 
     catalogue_address_label = Label(text="Catalogue:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
     catalogue_address_label.grid(row=2, column=0)
@@ -102,17 +103,80 @@ def first_page():
     references_address_button = Button(text="Browse")
     references_address_button.grid(row=5, column=2, padx=2, pady=10)
 
+    company_profile_address_label = Label(text="Company Profile", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    company_profile_address_label.grid(row=6, column=0)
 
-    save_button = Button(text="Save", width=10)
-    save_button.grid(row=13, column=0, padx=2, pady=10)
+    company_profile_address_entry = Entry(width=30)
+    company_profile_address_entry.grid(row=6, column=1, padx=2)
 
-    clear_all_button = Button(text="Clear All", width=10)
-    clear_all_button.grid(row=13, column=1, padx=2)
+    company_profile_address_button = Button(text="Browse")
+    company_profile_address_button.grid(row=6, column=2, padx=2, pady=10)
 
-    next_button = Button(text="Next", width=10)
-    next_button.grid(row=13, column=2, padx=2)
+    financial_address_label = Label(text="Financial Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    financial_address_label.grid(row=7, column=0)
+
+    financial_address_entry = Entry(width=30)
+    financial_address_entry.grid(row=7, column=1, padx=2)
+
+    financial_address_button = Button(text="Browse")
+    financial_address_button.grid(row=7, column=2, padx=2, pady=10)
+
+    audit_address_label = Label(text="Audit Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    audit_address_label.grid(row=2, column=3)
+
+    audit_address_entry = Entry(width=30)
+    audit_address_entry.grid(row=2, column=4, padx=2)
+
+    audit_address_button = Button(text="Browse")
+    audit_address_button.grid(row=2, column=5, padx=2, pady=10)
+
+    shareholders_address_label = Label(text="Shareholders:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    shareholders_address_label.grid(row=3, column=3)
+
+    shareholders_address_entry = Entry(width=30)
+    shareholders_address_entry.grid(row=3, column=4, padx=2)
+
+    shareholders_address_button = Button(text="Browse")
+    shareholders_address_button.grid(row=3, column=5, padx=2, pady=10)
+
+    qhse_address_label = Label(text="QHSE Documents:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    qhse_address_label.grid(row=4, column=3)
+
+    qhse_address_entry = Entry(width=30)
+    qhse_address_entry.grid(row=4, column=4, padx=2)
+
+    qhse_address_button = Button(text="Browse")
+    qhse_address_button.grid(row=4, column=5, padx=2, pady=10)
+
+    hse_stats_address_label = Label(text="HSE Statistics:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    hse_stats_address_label.grid(row=5, column=3)
+
+    hse_stats_address_entry = Entry(width=30)
+    hse_stats_address_entry.grid(row=5, column=4, padx=2)
+
+    hse_stats_address_button = Button(text="Browse")
+    hse_stats_address_button.grid(row=5, column=5, padx=2, pady=10)
+
+    company_stats_address_label = Label(text="Company Statistics:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    company_stats_address_label.grid(row=6, column=3)
+
+    company_stats_address_entry = Entry(width=30)
+    company_stats_address_entry.grid(row=6, column=4, padx=2)
+
+    company_stats_address_button = Button(text="Browse")
+    company_stats_address_button.grid(row=6, column=5, padx=2, pady=10)
+
+
+    save_button = Button(text="Save", width=20)
+    save_button.grid(row=13, column=0, padx=2, pady=5)
+
+    clear_all_button = Button(text="Clear All", width=20)
+    clear_all_button.grid(row=13, column=2, padx=2)
+
+    next_button = Button(text="Next", width=20)
+    next_button.grid(row=13, column=4, padx=2)
 
     help_button = Button(text="?", width=5, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    help_button.grid(row=13, column=3, padx=10)
+    help_button.grid(row=13, column=6, padx=10)
 
     window_first.mainloop()
