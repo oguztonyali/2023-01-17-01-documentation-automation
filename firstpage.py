@@ -84,5 +84,35 @@ def first_page():
     iso_address_button = Button(text="Browse")
     iso_address_button.grid(row=3, column=2, padx=2, pady=10)
 
+    iec_address_label = Label(text="IEC Certificates:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    iec_address_label.grid(row=4, column=0)
+
+    iec_address_entry = Entry(width=30)
+    iec_address_entry.grid(row=4, column=1, padx=2)
+
+    iec_address_button = Button(text="Browse")
+    iec_address_button.grid(row=4, column=2, padx=2, pady=10)
+
+    references_address_label = Label(text="References:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    references_address_label.grid(row=5, column=0)
+
+    references_address_entry = Entry(width=30)
+    references_address_entry.grid(row=5, column=1, padx=2)
+
+    references_address_button = Button(text="Browse")
+    references_address_button.grid(row=5, column=2, padx=2, pady=10)
+
+
+    save_button = Button(text="Save", width=10)
+    save_button.grid(row=13, column=0, padx=2, pady=10)
+
+    clear_all_button = Button(text="Clear All", width=10)
+    clear_all_button.grid(row=13, column=1, padx=2)
+
+    next_button = Button(text="Next", width=10)
+    next_button.grid(row=13, column=2, padx=2)
+
+    help_button = Button(text="?", width=5, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    help_button.grid(row=13, column=3, padx=10)
 
     window_first.mainloop()
