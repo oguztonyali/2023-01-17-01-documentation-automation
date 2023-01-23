@@ -101,11 +101,14 @@ def second_page():
     clear_all_button = Button(text="Clear All", width=15)
     clear_all_button.grid(row=15, column=3)
 
-    next_button = Button(text="Next", width=15)
+    next_button = Button(text="Previous", width=15)
     next_button.grid(row=15, column=4)
 
+    next_button = Button(text="Next", width=15)
+    next_button.grid(row=15, column=5)
+
     help_button = Button(text="?", width=5, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    help_button.grid(row=15, column=5)
+    help_button.grid(row=15, column=6)
 
 
     window_second.mainloop()
