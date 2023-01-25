@@ -1,5 +1,6 @@
 from tkinter import *
 import tkinter.ttk as ttk
+import functions_for_all
 
 # Tender Documentation Automation Project
 
@@ -67,104 +68,149 @@ def first_page():
         FONT_NAME, 14, "bold"))
     tender_browsing_label.grid(row=1, column=0, columnspan=6, pady=5)
 
+    catalogue_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    catalogue_checkbox.grid(row=2, column=0)
+
     catalogue_address_label = Label(text="Catalogue:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    catalogue_address_label.grid(row=2, column=0)
+    catalogue_address_label.grid(row=2, column=1)
 
     catalogue_address_entry = Entry(width=30)
-    catalogue_address_entry.grid(row=2, column=1, padx=2)
+    catalogue_address_entry.grid(row=2, column=2, padx=2)
 
     catalogue_address_button = Button(text="Browse")
-    catalogue_address_button.grid(row=2, column=2, padx=2, pady=10)
+    catalogue_address_button.grid(row=2, column=3, padx=2, pady=10)
+
+    iso_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    iso_checkbox.grid(row=3, column=0)
 
     iso_address_label = Label(text="ISO Certificates:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    iso_address_label.grid(row=3, column=0)
+    iso_address_label.grid(row=3, column=1)
 
     iso_address_entry = Entry(width=30)
-    iso_address_entry.grid(row=3, column=1, padx=2)
+    iso_address_entry.grid(row=3, column=2, padx=2)
 
     iso_address_button = Button(text="Browse")
-    iso_address_button.grid(row=3, column=2, padx=2, pady=10)
+    iso_address_button.grid(row=3, column=3, padx=2, pady=10)
+
+    iec_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    iec_checkbox.grid(row=4, column=0)
 
     iec_address_label = Label(text="IEC Certificates:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    iec_address_label.grid(row=4, column=0)
+    iec_address_label.grid(row=4, column=1)
 
     iec_address_entry = Entry(width=30)
-    iec_address_entry.grid(row=4, column=1, padx=2)
+    iec_address_entry.grid(row=4, column=2, padx=2)
 
     iec_address_button = Button(text="Browse")
-    iec_address_button.grid(row=4, column=2, padx=2, pady=10)
+    iec_address_button.grid(row=4, column=3, padx=2, pady=10)
+
+    references_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    references_checkbox.grid(row=5, column=0)
 
     references_address_label = Label(text="References:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    references_address_label.grid(row=5, column=0)
+    references_address_label.grid(row=5, column=1)
 
     references_address_entry = Entry(width=30)
-    references_address_entry.grid(row=5, column=1, padx=2)
+    references_address_entry.grid(row=5, column=2, padx=2)
 
     references_address_button = Button(text="Browse")
-    references_address_button.grid(row=5, column=2, padx=2, pady=10)
+    references_address_button.grid(row=5, column=3, padx=2, pady=10)
+
+    company_profile_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    company_profile_checkbox.grid(row=6, column=0)
 
     company_profile_address_label = Label(text="Company Profile", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    company_profile_address_label.grid(row=6, column=0)
+    company_profile_address_label.grid(row=6, column=1)
 
     company_profile_address_entry = Entry(width=30)
-    company_profile_address_entry.grid(row=6, column=1, padx=2)
+    company_profile_address_entry.grid(row=6, column=2, padx=2)
 
     company_profile_address_button = Button(text="Browse")
-    company_profile_address_button.grid(row=6, column=2, padx=2, pady=10)
+    company_profile_address_button.grid(row=6, column=3, padx=2, pady=10)
+
+    financial_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    financial_address_checkbox.grid(row=7, column=0)
 
     financial_address_label = Label(text="Financial Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    financial_address_label.grid(row=7, column=0)
+    financial_address_label.grid(row=7, column=1)
 
     financial_address_entry = Entry(width=30)
-    financial_address_entry.grid(row=7, column=1, padx=2)
+    financial_address_entry.grid(row=7, column=2, padx=2)
 
     financial_address_button = Button(text="Browse")
-    financial_address_button.grid(row=7, column=2, padx=2, pady=10)
+    financial_address_button.grid(row=7, column=3, padx=2, pady=10)
+
+    audit_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    audit_address_checkbox.grid(row=2, column=4)
 
     audit_address_label = Label(text="Audit Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    audit_address_label.grid(row=2, column=3)
+    audit_address_label.grid(row=2, column=5)
 
     audit_address_entry = Entry(width=30)
-    audit_address_entry.grid(row=2, column=4, padx=2)
+    audit_address_entry.grid(row=2, column=6, padx=2)
 
     audit_address_button = Button(text="Browse")
-    audit_address_button.grid(row=2, column=5, padx=2, pady=10)
+    audit_address_button.grid(row=2, column=7, padx=2, pady=10)
+
+    shareholders_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    shareholders_address_checkbox.grid(row=3, column=4)
 
     shareholders_address_label = Label(text="Shareholders:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    shareholders_address_label.grid(row=3, column=3)
+    shareholders_address_label.grid(row=3, column=5)
 
     shareholders_address_entry = Entry(width=30)
-    shareholders_address_entry.grid(row=3, column=4, padx=2)
+    shareholders_address_entry.grid(row=3, column=6, padx=2)
 
     shareholders_address_button = Button(text="Browse")
-    shareholders_address_button.grid(row=3, column=5, padx=2, pady=10)
+    shareholders_address_button.grid(row=3, column=7, padx=2, pady=10)
+
+    qhse_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    qhse_address_checkbox.grid(row=4, column=4)
 
     qhse_address_label = Label(text="QHSE Documents:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    qhse_address_label.grid(row=4, column=3)
+    qhse_address_label.grid(row=4, column=5)
 
     qhse_address_entry = Entry(width=30)
-    qhse_address_entry.grid(row=4, column=4, padx=2)
+    qhse_address_entry.grid(row=4, column=6, padx=2)
 
     qhse_address_button = Button(text="Browse")
-    qhse_address_button.grid(row=4, column=5, padx=2, pady=10)
+    qhse_address_button.grid(row=4, column=7, padx=2, pady=10)
+
+    hse_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    hse_address_checkbox.grid(row=5, column=4)
 
     hse_stats_address_label = Label(text="HSE Statistics:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    hse_stats_address_label.grid(row=5, column=3)
+    hse_stats_address_label.grid(row=5, column=5)
 
     hse_stats_address_entry = Entry(width=30)
-    hse_stats_address_entry.grid(row=5, column=4, padx=2)
+    hse_stats_address_entry.grid(row=5, column=6, padx=2)
 
     hse_stats_address_button = Button(text="Browse")
-    hse_stats_address_button.grid(row=5, column=5, padx=2, pady=10)
+    hse_stats_address_button.grid(row=5, column=7, padx=2, pady=10)
+
+    company_stats_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    company_stats_address_checkbox.grid(row=6, column=4)
 
     company_stats_address_label = Label(text="Company Statistics:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    company_stats_address_label.grid(row=6, column=3)
+    company_stats_address_label.grid(row=6, column=5)
 
     company_stats_address_entry = Entry(width=30)
-    company_stats_address_entry.grid(row=6, column=4, padx=2)
+    company_stats_address_entry.grid(row=6, column=6, padx=2)
 
     company_stats_address_button = Button(text="Browse")
-    company_stats_address_button.grid(row=6, column=5, padx=2, pady=10)
+    company_stats_address_button.grid(row=6, column=7, padx=2, pady=10)
+
+    test_reports_address_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    test_reports_address_checkbox.grid(row=7, column=4)
+
+    test_reports_address_label = Label(text="Test Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    test_reports_address_label.grid(row=7, column=5)
+
+    test_reports_address_entry = Entry(width=30)
+    test_reports_address_entry.grid(row=7, column=6, padx=2)
+
+    test_reports_address_button = Button(text="Browse")
+    test_reports_address_button.grid(row=7, column=7, padx=2, pady=10)
 
 
     save_button = Button(text="Save", width=20)
@@ -173,7 +219,7 @@ def first_page():
     clear_all_button = Button(text="Clear All", width=20)
     clear_all_button.grid(row=13, column=2, padx=2)
 
-    next_button = Button(text="Next", width=20)
+    next_button = Button(text="Next", width=20, command=functions_for_all.first_to_next)
     next_button.grid(row=13, column=4, padx=2)
 
     help_button = Button(text="?", width=5, bg=DARK, font=(FONT_NAME, 12, "bold"))
