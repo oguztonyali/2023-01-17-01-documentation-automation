@@ -48,47 +48,69 @@ def second_page():
     select_tender_folder_entry = Entry(width=90)
     select_tender_folder_entry.grid(row=3, column=3, columnspan=5, sticky="W")
 
-    constant_label = Label(text="Constant Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    constant_label.grid(row=4, column=1, columnspan=3)
-
     tender_files_label = Label(text="Tender Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    tender_files_label.grid(row=4, column=4, columnspan=4)
+    tender_files_label.grid(row=4, column=2, columnspan=4)
 
-    catalogue_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    catalogue_checkbox.grid(row=5, column=0)
+    datasheets_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    datasheets_checkbox.grid(row=5, column=0)
 
-    catalogue_label = Label(text="Catalogue", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    catalogue_label.grid(row=5, column=1)
+    datasheets_label = Label(text="Datasheets:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    datasheets_label.grid(row=5, column=1)
 
-    iso_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    iso_checkbox.grid(row=6, column=0)
+    datasheets_entry = Entry(width=30)
+    datasheets_entry.grid(row=5, column=2)
 
-    iso_label = Label(text="ISO Certificates", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    iso_label.grid(row=6, column=1)
+    datasheets_address_button = Button(text="Browse")
+    datasheets_address_button.grid(row=5, column=3, pady=5)
 
-    iec_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    iec_checkbox.grid(row=7, column=0)
+    offer_letter_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    offer_letter_checkbox.grid(row=6, column=0)
 
-    iec_label = Label(text="IEC Certificates", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    iec_label.grid(row=7, column=1)
+    offer_letter_label = Label(text="Offer Letter:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    offer_letter_label.grid(row=6, column=1)
 
-    test_reports_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    test_reports_checkbox.grid(row=8, column=0)
+    offer_letter_entry = Entry(width=30)
+    offer_letter_entry.grid(row=6, column=2)
 
-    test_reports_label = Label(text="Test Reports", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    test_reports_label.grid(row=8, column=1)
+    offer_letter_address_button = Button(text="Browse")
+    offer_letter_address_button.grid(row=6, column=3, pady=5)
 
-    references_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    references_checkbox.grid(row=9, column=0)
+    drawings_letter_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    drawings_letter_checkbox.grid(row=7, column=0)
 
-    references_label = Label(text="References", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    references_label.grid(row=9, column=1)
+    drawings_letter_label = Label(text="GA Drawings:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    drawings_letter_label.grid(row=7, column=1)
 
-    company_profile_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
-    company_profile_checkbox.grid(row=10, column=0)
+    drawings_letter_entry = Entry(width=30)
+    drawings_letter_entry.grid(row=7, column=2)
 
-    company_profile_label = Label(text="Company Profile", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
-    company_profile_label.grid(row=10, column=1)
+    drawings_letter_address_button = Button(text="Browse")
+    drawings_letter_address_button.grid(row=7, column=3, pady=5)
+
+    equipment_list_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    equipment_list_checkbox.grid(row=8, column=0)
+
+    equipment_list_label = Label(text="Equipment List:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    equipment_list_label.grid(row=8, column=1)
+
+    equipment_list_entry = Entry(width=30)
+    equipment_list_entry.grid(row=8, column=2)
+
+    equipment_list_address_button = Button(text="Browse")
+    equipment_list_address_button.grid(row=8, column=3, pady=5)
+
+    spare_parts_checkbox = Checkbutton(bg=DARK, activebackground=DARK, highlightthickness=0)
+    spare_parts_checkbox.grid(row=9, column=0)
+
+    spare_parts_label = Label(text="Spare Parts:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+    spare_parts_label.grid(row=9, column=1)
+
+    spare_parts_entry = Entry(width=30)
+    spare_parts_entry.grid(row=9, column=2)
+
+    spare_parts_address_button = Button(text="Browse")
+    spare_parts_address_button.grid(row=9, column=3, pady=5)
+
 
 # -------------------------------------------------------------------------------- #
 
