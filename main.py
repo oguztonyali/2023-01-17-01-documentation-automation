@@ -17,14 +17,15 @@ country_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American 
 
 # ---------------------------- UI FIRST PAGE SETUP ------------------------------- #
 
-firstpage.first_page()
+# firstpage.first_page()
+
 
 # -------------------------------------------------------------------------------- #
 
 
 # ---------------------------- UI SECOND PAGE SETUP ------------------------------- #
 
-# secondpage.second_page()
+secondpage.second_page()
 
 # -------------------------------------------------------------------------------- #
 
