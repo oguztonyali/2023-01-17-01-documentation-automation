@@ -12,7 +12,7 @@ country_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American 
 
 
 def second_page():
-    """Second page contains choosing options on tender and constant documents. Also, tender information such
+    """Second page contains choosing options on tender documents. Also, tender information such
     as quotation number, tender name etc. can be written on this page."""
     window_second = Tk()
     window_second.title("Tender Documentation Helper v.0.2")
@@ -46,7 +46,10 @@ def second_page():
     select_tender_folder_label.grid(row=3, column=0, sticky="W", columnspan=3, pady=10)
 
     select_tender_folder_entry = Entry(width=90)
-    select_tender_folder_entry.grid(row=3, column=3, columnspan=5, sticky="W")
+    select_tender_folder_entry.grid(row=3, column=3, columnspan=4, sticky="W")
+
+    select_tender_folder_address_button = Button(text="Browse")
+    select_tender_folder_address_button.grid(row=3, column=8, padx=5)
 
     tender_files_label = Label(text="Tender Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
     tender_files_label.grid(row=4, column=2, columnspan=4)
