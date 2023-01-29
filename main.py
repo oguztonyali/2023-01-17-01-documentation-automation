@@ -84,7 +84,8 @@ references_address_button.grid(row=5, column=3, padx=2, pady=10)
 company_profile_checkbox = Checkbutton(constant_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
 company_profile_checkbox.grid(row=6, column=0)
 
-company_profile_address_label = Label(constant_tab, text="Company Profile", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+company_profile_address_label = Label(constant_tab, text="Company Profile", fg=BLUE, bg=DARK,
+                                      font=(FONT_NAME, 12, "bold"))
 company_profile_address_label.grid(row=6, column=1)
 
 company_profile_address_entry = Entry(constant_tab, width=30)
@@ -96,7 +97,7 @@ company_profile_address_button.grid(row=6, column=3, padx=2, pady=10)
 financial_address_checkbox = Checkbutton(constant_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
 financial_address_checkbox.grid(row=7, column=0)
 
-financial_address_label = Label(constant_tab, text="Financial Reports:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+financial_address_label = Label(constant_tab, text="Financial Reports:", fg=BLUE, bg=DARK,font=(FONT_NAME, 12, "bold"))
 financial_address_label.grid(row=7, column=1)
 
 financial_address_entry = Entry(constant_tab, width=30)
