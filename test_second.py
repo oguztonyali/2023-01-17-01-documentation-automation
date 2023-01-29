@@ -1,10 +1,10 @@
 import unittest
-from secondpage import second_page
+import main
 
 
-class TestSecondpage(unittest.TestCase):
+class TestMainPage(unittest.TestCase):
 
-    def test_help_button(self):
+    def test_labels(self):
         pass
 
 
