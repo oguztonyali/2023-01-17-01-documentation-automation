@@ -1,4 +1,3 @@
-import firstpage
 import secondpage
 from tkinter import *
 

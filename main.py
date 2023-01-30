@@ -187,6 +187,99 @@ tender_tab = Frame(my_notebook, width=500, height=500, bg=DARK)
 tender_tab.pack(fill="both", expand=1)
 my_notebook.add(tender_tab, text="Tender Files")
 
+tender_no_label = Label(tender_tab, text="Tender No:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+tender_no_label.grid(row=1, column=1)
+
+tender_no_entry = Entry(tender_tab, width=30)
+tender_no_entry.grid(row=1, column=2)
+
+tender_name_label = Label(tender_tab, text="Tender Name:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+tender_name_label.grid(row=1, column=4, sticky="W")
+
+tender_name_entry = Entry(tender_tab, width=30)
+tender_name_entry.grid(row=1, column=5)
+
+country_choose = Label(tender_tab, text="Country:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+country_choose.grid(row=2, column=1, sticky="W")
+
+country_box = ttk.Combobox(tender_tab, width=27)
+country_box.grid(row=2, column=2)
+country_box["values"] = country_list
+
+select_tender_folder_label = Label(tender_tab, text="Select where to create Rar File:", fg=BLUE, bg=DARK,
+                                   font=(FONT_NAME, 12, "bold"))
+select_tender_folder_label.grid(row=3, column=0, sticky="W", columnspan=3, pady=10)
+
+select_tender_folder_entry = Entry(tender_tab, width=90)
+select_tender_folder_entry.grid(row=3, column=3, columnspan=4, sticky="W")
+
+select_tender_folder_address_button = Button(tender_tab, text="Browse")
+select_tender_folder_address_button.grid(row=3, column=8, padx=5)
+
+tender_files_label = Label(tender_tab, text="Tender Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+tender_files_label.grid(row=4, column=2, columnspan=4)
+
+datasheets_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
+datasheets_checkbox.grid(row=5, column=0)
+
+datasheets_label = Label(tender_tab, text="Datasheets:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+datasheets_label.grid(row=5, column=1)
+
+datasheets_entry = Entry(tender_tab, width=30)
+datasheets_entry.grid(row=5, column=2)
+
+datasheets_address_button = Button(tender_tab, text="Browse")
+datasheets_address_button.grid(row=5, column=3, pady=5)
+
+offer_letter_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
+offer_letter_checkbox.grid(row=6, column=0)
+
+offer_letter_label = Label(tender_tab, text="Offer Letter:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+offer_letter_label.grid(row=6, column=1)
+
+offer_letter_entry = Entry(tender_tab, width=30)
+offer_letter_entry.grid(row=6, column=2)
+
+offer_letter_address_button = Button(tender_tab, text="Browse")
+offer_letter_address_button.grid(row=6, column=3, pady=5)
+
+drawings_letter_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
+drawings_letter_checkbox.grid(row=7, column=0)
+
+drawings_letter_label = Label(tender_tab, text="GA Drawings:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+drawings_letter_label.grid(row=7, column=1)
+
+drawings_letter_entry = Entry(tender_tab, width=30)
+drawings_letter_entry.grid(row=7, column=2)
+
+drawings_letter_address_button = Button(tender_tab, text="Browse")
+drawings_letter_address_button.grid(row=7, column=3, pady=5)
+
+equipment_list_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
+equipment_list_checkbox.grid(row=8, column=0)
+
+equipment_list_label = Label(tender_tab, text="Equipment List:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+equipment_list_label.grid(row=8, column=1)
+
+equipment_list_entry = Entry(tender_tab, width=30)
+equipment_list_entry.grid(row=8, column=2)
+
+equipment_list_address_button = Button(tender_tab, text="Browse")
+equipment_list_address_button.grid(row=8, column=3, pady=5)
+
+spare_parts_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
+spare_parts_checkbox.grid(row=9, column=0)
+
+spare_parts_label = Label(tender_tab, text="Spare Parts:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+spare_parts_label.grid(row=9, column=1)
+
+spare_parts_entry = Entry(tender_tab, width=30)
+spare_parts_entry.grid(row=9, column=2)
+
+spare_parts_address_button = Button(tender_tab, text="Browse")
+spare_parts_address_button.grid(row=9, column=3, pady=5)
+
+
 # ------------------------------------------------------------------------------------ #
 
 
