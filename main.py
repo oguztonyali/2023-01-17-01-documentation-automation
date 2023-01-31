@@ -16,7 +16,7 @@ country_list = ['Afghanistan', 'Aland Islands', 'Albania', 'Algeria', 'American 
 
 window = Tk()
 window.title("Tender Documentation Helper v.0.2")
-window.config(padx=10, pady=10, bg=DARK)
+window.config(padx=0, pady=0, bg=DARK)
 
 my_notebook = ttk.Notebook(window)
 my_notebook.grid(row=1, column=0, columnspan=7)
@@ -213,7 +213,7 @@ select_tender_folder_label.grid(row=3, column=0, sticky="W", columnspan=3, pady=
 select_tender_folder_entry = Entry(tender_tab, width=90)
 select_tender_folder_entry.grid(row=3, column=3, columnspan=4, sticky="W")
 
-select_tender_folder_address_button = Button(tender_tab, text="Browse")
+select_tender_folder_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 select_tender_folder_address_button.grid(row=3, column=8, padx=5)
 
 tender_files_label = Label(tender_tab, text="Tender Files", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
@@ -228,7 +228,7 @@ datasheets_label.grid(row=5, column=1)
 datasheets_entry = Entry(tender_tab, width=30)
 datasheets_entry.grid(row=5, column=2)
 
-datasheets_address_button = Button(tender_tab, text="Browse")
+datasheets_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 datasheets_address_button.grid(row=5, column=3, pady=5)
 
 offer_letter_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
@@ -240,7 +240,7 @@ offer_letter_label.grid(row=6, column=1)
 offer_letter_entry = Entry(tender_tab, width=30)
 offer_letter_entry.grid(row=6, column=2)
 
-offer_letter_address_button = Button(tender_tab, text="Browse")
+offer_letter_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 offer_letter_address_button.grid(row=6, column=3, pady=5)
 
 drawings_letter_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
@@ -252,7 +252,7 @@ drawings_letter_label.grid(row=7, column=1)
 drawings_letter_entry = Entry(tender_tab, width=30)
 drawings_letter_entry.grid(row=7, column=2)
 
-drawings_letter_address_button = Button(tender_tab, text="Browse")
+drawings_letter_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 drawings_letter_address_button.grid(row=7, column=3, pady=5)
 
 equipment_list_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
@@ -264,7 +264,7 @@ equipment_list_label.grid(row=8, column=1)
 equipment_list_entry = Entry(tender_tab, width=30)
 equipment_list_entry.grid(row=8, column=2)
 
-equipment_list_address_button = Button(tender_tab, text="Browse")
+equipment_list_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 equipment_list_address_button.grid(row=8, column=3, pady=5)
 
 spare_parts_checkbox = Checkbutton(tender_tab, bg=DARK, activebackground=DARK, highlightthickness=0)
@@ -276,7 +276,7 @@ spare_parts_label.grid(row=9, column=1)
 spare_parts_entry = Entry(tender_tab, width=30)
 spare_parts_entry.grid(row=9, column=2)
 
-spare_parts_address_button = Button(tender_tab, text="Browse")
+spare_parts_address_button = Button(tender_tab, text="Browse", bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 spare_parts_address_button.grid(row=9, column=3, pady=5)
 
 
@@ -289,17 +289,23 @@ sending_tab = Frame(my_notebook, width=500, height=500, bg=DARK)
 sending_tab.pack(fill="both", expand=1)
 my_notebook.add(sending_tab, text="Pack & Send")
 
+create_rar_button = Button(text="Create RAR")
+
+upload_to_wetransfer_button = Button(text="Upload to WeTransfer")
+
+sending_mail_label = Label(sending_tab, text="Customer Mail Address", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+
 # -------------------------------------------------------------------------------------- #
 
 # ---------------------------- UI MAIN PAGE BOTTOM SETUP ------------------------------- #
 
-save_button = Button(text="Save", width=20)
+save_button = Button(text="Save", width=20, bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 save_button.grid(row=10, column=0, padx=2, pady=5)
 
-clear_all_button = Button(text="Clear All", width=20)
+clear_all_button = Button(text="Clear All", width=20, bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 clear_all_button.grid(row=10, column=2, padx=2)
 
-next_button = Button(text="Next", width=20)
+next_button = Button(text="Next", width=20, bg=DARK, font=(FONT_NAME, 12, "bold"), fg=BLUE)
 next_button.grid(row=10, column=4, padx=2)
 
 help_button = Button(text="?", width=5, bg=DARK, font=(FONT_NAME, 12, "bold"))
