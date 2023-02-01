@@ -191,7 +191,7 @@ tender_no_label = Label(tender_tab, text="Tender No:", fg=BLUE, bg=DARK, font=(F
 tender_no_label.grid(row=1, column=1)
 
 tender_no_entry = Entry(tender_tab, width=30)
-tender_no_entry.grid(row=1, column=2)
+tender_no_entry.grid(row=1, column=2, pady=15)
 
 tender_name_label = Label(tender_tab, text="Tender Name:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
 tender_name_label.grid(row=1, column=4, sticky="W")
@@ -289,11 +289,26 @@ sending_tab = Frame(my_notebook, width=500, height=500, bg=DARK)
 sending_tab.pack(fill="both", expand=1)
 my_notebook.add(sending_tab, text="Pack & Send")
 
-create_rar_button = Button(text="Create RAR")
+create_rar_button = Button(sending_tab, text="Create RAR", bg=DARK, font=(FONT_NAME, 16, "bold"), fg=BLUE)
+create_rar_button.grid(row=2, column=3, columnspan=3, padx=20, pady=30)
 
-upload_to_wetransfer_button = Button(text="Upload to WeTransfer")
+upload_to_wetransfer_button = Button(sending_tab, text="Upload WeTransfer", fg=BLUE, bg=DARK, font=(FONT_NAME, 16, "bold"))
+upload_to_wetransfer_button.grid(row=3, column=3, columnspan=3, pady=30)
 
-sending_mail_label = Label(sending_tab, text="Customer Mail Address", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+sending_mail_label = Label(sending_tab, text="Customer Mail Address:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+sending_mail_label.grid(row=4, column=1)
+
+sending_mail_entry = Entry(sending_tab, width=40)
+sending_mail_entry.grid(row=4, column=2)
+
+sending_cc_label = Label(sending_tab, text="CC:", fg=BLUE, bg=DARK, font=(FONT_NAME, 12, "bold"))
+sending_cc_label.grid(row=4, column=3, padx=10)
+
+sending_cc_entry = Entry(sending_tab, width=40)
+sending_cc_entry.grid(row=4, column=4)
+
+send_mail_button = Button(sending_tab, text="SEND EMAIL", fg=BLUE, bg=DARK, font=(FONT_NAME, 18, "bold"))
+send_mail_button.grid(row=5, column=3, columnspan=3, pady=30)
 
 # -------------------------------------------------------------------------------------- #
 
